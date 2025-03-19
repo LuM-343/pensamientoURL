@@ -22,12 +22,11 @@ while condicion==False:
         saldo-=retiro
         if saldo>0:
             print(f"Transacción exitosa. Saldo disponible: Q{saldo}")
-        else:
-            print("Transacción exitosa, saldos agotados, se finalizará sesión")
-
-        if saldo>0 and intentos>0 and not(salir==0):
+            print()
             print("¿Desea salir del cajero?")
             salir=input("Presione 0 para salir o cualquier otro número para continuar: ")
+        else:
+            print("Transacción exitosa, saldos agotados, se finalizará sesión")
 
     condicion=bool(saldo==0 or intentos==0 or salir=="0")
     print()
