@@ -1,0 +1,53 @@
+#Ejercicio No.1
+print("------------------------------------")
+print("Ejercicio No. 1")
+print("Imprimir los impares del 1 al 10")
+
+for i in range (1,11):
+    if i%2!=0:
+        print(i)
+
+
+#Ejercicio No.2
+print("------------------------------------")
+print("Ejercicio No. 2")
+print("Imprimir los impares del 1 al 10")
+
+x=1
+
+while x<11:
+    if x%2 != 0:
+        print(x)
+    x+=1
+
+
+#Escenario No. 1
+print("------------------------------------")
+print("Escenario No. 1")
+print("Estar en un bucle a menos que se imprima la palabra secreta")
+
+word= "chupacabra"
+
+while True:
+    comparar=str(input("Ingrese la palabra para salir: "))
+    comparar=comparar.lower()
+    if comparar==word:
+        break
+print ("¡Has dejado el bucle con éxito" )
+
+
+#Escenario No. 2
+print("------------------------------------")
+print("Escenario No. 2")
+print("Comedor de vocales")
+
+palabra=str(input("Ingrese la palabra: "))
+palabra=palabra.upper()
+words=list(palabra)
+vocales=["A", "E", "I", "O", "U"]
+r=len(words)
+
+for i in range (0,(r)):
+    if (words[i]) in vocales:
+        continue
+    print(words[i])
