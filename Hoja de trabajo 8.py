@@ -37,6 +37,7 @@ buena=0
 regular=0
 mala=0
 suma=0
+r=0
 print("¿Cómo calificria nuestro servicio?")
 print("Siendo 5 excelente, 4 muy buena, 3 buena, 2 regular y 1 malo")
 for i in range (0,n):
@@ -44,9 +45,6 @@ for i in range (0,n):
     encuesta=int(input("Ingrese su respuesta: "))
     personas.append((i+1))
     respuestas.append(encuesta)
-    
-print(personas)
-print(respuestas)
 
 for i in range (0,len(personas)):
     if respuestas[i]==5:
@@ -65,6 +63,7 @@ for i in range (0,len(personas)):
         suma=suma+1
         mala+=1
 
+print()
 print("Cantidad de respuestas")        
 print(f"Excelente: {excelente}")
 print(f"Muy buena: {muyBuena}")
@@ -90,7 +89,6 @@ elif mayor==excelente:
 prom=suma/n
 print()
 print(f"El promedio de respuestas es {prom}")
-r=0
 for i in range (0,n):
     if respuestas[i]<prom:
         r+=1
