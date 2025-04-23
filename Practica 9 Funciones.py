@@ -55,3 +55,17 @@ def cuenta_ascendente(n, a=1):
 num=int(input("Ingrese un número: "))
 cuenta_ascendente(num)
 print()
+
+#Ejercicio 5
+print("--------------------")
+print("Ejercicio 5")
+
+def suma_hasta(n):
+    a=0
+    for i in range (0,n+1):
+        a=a+i
+    return a
+        
+num=int(input("Ingrese un número: "))
+print(suma_hasta(num))
+print()
