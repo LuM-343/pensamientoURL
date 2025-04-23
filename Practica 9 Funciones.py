@@ -26,3 +26,18 @@ def suma_lista(lista):
     
 print(suma_lista(listado))
 print()
+
+#Ejercicio 3
+print("--------------------")
+print("Ejercicio 3")
+
+def cuenta_regresiva(n):
+    if n<0:
+        print("El tiempo se acabo")
+    else:
+        print(n)
+        cuenta_regresiva(n-1)
+        
+num=int(input("Ingrese un número: "))
+cuenta_regresiva(num)
+print()
