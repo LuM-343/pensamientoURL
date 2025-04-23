@@ -3,12 +3,12 @@
 print("--------------------")
 print("Ejercicio 1")
 
-def par_impar (n):
+def es_par_o_impar (n):
     if n%2==0:
         print("Es un número par")
     else:
         print ("Es un número impar")
         
 num=int(input("Ingrese un numero: "))
-par_impar(num)
+es_par_o_impar(num)
 print()
