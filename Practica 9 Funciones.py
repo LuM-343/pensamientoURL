@@ -11,3 +11,4 @@ def par_impar (n):
         
 num=int(input("Ingrese un numero: "))
 par_impar(num)
+print()
