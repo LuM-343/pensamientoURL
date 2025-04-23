@@ -69,3 +69,17 @@ def suma_hasta(n,a=0, b=0):
 num=int(input("Ingrese un número: "))
 print(suma_hasta(num))
 print()
+
+#Ejercicio 6
+print("--------------------")
+print("Ejercicio 6")
+
+def factorial(n,a=1, b=1):
+    if a > n:
+        return b
+    else:
+        return factorial(n,a + 1, b*a)
+        
+num=int(input("Ingrese un número: "))
+print(factorial(num))
+print()
