@@ -60,11 +60,11 @@ print()
 print("--------------------")
 print("Ejercicio 5")
 
-def suma_hasta(n):
-    a=0
-    for i in range (0,n+1):
-        a=a+i
-    return a
+def suma_hasta(n,a=0, b=0):
+    if a > n:
+        return b
+    else:
+        return suma_hasta(n,a + 1, b + a)
         
 num=int(input("Ingrese un número: "))
 print(suma_hasta(num))
