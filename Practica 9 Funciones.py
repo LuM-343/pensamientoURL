@@ -41,3 +41,17 @@ def cuenta_regresiva(n):
 num=int(input("Ingrese un número: "))
 cuenta_regresiva(num)
 print()
+
+#Ejercicio 4
+print("--------------------")
+print("Ejercicio 4")
+
+def cuenta_ascendente(n, a=1):
+    if a>n:
+        print("Cuenta terminada")
+    else:
+        print(a)
+        cuenta_ascendente(n,a+1)
+num=int(input("Ingrese un número: "))
+cuenta_ascendente(num)
+print()
