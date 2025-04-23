@@ -83,3 +83,24 @@ def factorial(n,a=1, b=1):
 num=int(input("Ingrese un número: "))
 print(factorial(num))
 print()
+
+#Ejercicio 7
+print("--------------------")
+print("Ejercicio 7")
+
+def min_lista(lista):
+    if len(lista) == 1:
+        return lista[0]
+    else:
+        primer_elemento = lista[0]
+        resto = min_lista(lista[1:])
+        
+        # Compara el primer elemento con el mínimo del resto de la lista
+        if primer_elemento < resto:
+            return primer_elemento
+        else:
+            return resto
+
+lista = [5, 3, 8, 1, 2]
+print(min_lista(lista))
+print()
