@@ -104,3 +104,38 @@ def min_lista(lista):
 lista = [5, 3, 8, 1, 2]
 print(min_lista(lista))
 print()
+
+#----------------------------------------------------------
+# Segunda parte Laboratorio Luis Manuel Velásquez González
+import time
+def adivina_el_numero(numero, intentos, tiempo_inicio):
+    print ()
+    respuesta= int (input("Escribe tu número: "))
+    if intentos==1:
+        print()
+        print(f"Perdiste, el número secreto era {numero}")
+        tiempo_final=time.time()
+        print(f"Tardaste {int(tiempo_final-tiempo_inicio)} segundos y no adivinaste, ¡que malo!")
+    elif numero == respuesta:
+        print()
+        print (f"Correcto el número secreto es {numero}")
+        tiempo_final=time.time()
+        print (f"Tardaste {int(tiempo_final-tiempo_inicio)} segundos en adivinarlo")
+    else:
+        print("Número incorrecto, prueba otra vez")
+        adivina_el_numero(numero, intentos-1, tiempo_inicio)
+        
+#Configurar el juego
+print("-------------------------------------------------")
+print ("Configuración del Juego")
+numero_secreto=int(input("Ingrese el número a adivinar, del 1 al 100: "))
+
+intentos=int(input("Ingrese la cantidad de intentos a tener: "))
+print("-------------------------------------------------")
+print()
+
+# Iniciar el juego con 5 intentos
+print("Bienvenido al juego de Adivina el Número.")
+print("Elige un número entre 1 y 100.")
+print("¡Buena suerte!")
+adivina_el_numero(numero_secreto, intentos, time.time() )
