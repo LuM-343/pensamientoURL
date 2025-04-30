@@ -115,3 +115,71 @@ reptil1=Reptil("Pepe", 7, 6, "No come bie", "2 meses", 15)
 reptil1.Datos_Basicos()
 reptil1.Dosis()
 reptil1.Ficha_medica()
+
+
+
+
+#Luis Manuel Velásquez González, Caret: 1502325
+#Ejercicio 2
+#Centro de datos
+
+class Persona:
+    def __init__(self, nombre, edad, dpi):
+        self.nombre=nombre
+        self.edad=edad
+        self.dpi=dpi
+        
+    def Datos_Basicos(self):
+        print("---------------")
+        print("Datos básicos")
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad} años")
+        print(f"DPI: {self.dpi}")
+        
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, dpi, anio, carrera):
+        super().__init__(nombre, edad, dpi)
+        self.anio=anio
+        self.carrera=carrera
+        
+    def Datos_Generales(self):
+        super().Datos_Basicos()
+        print("--Datos específicos--")
+        print("Profesión: estudiante")
+        print(f"Carrera: {self.carrera}")
+        print(f"Año de ingreso a la U: {self.anio}")
+        
+class Docente(Persona):
+    def __init__(self, nombre, edad, dpi, curso, titulo):
+        super().__init__(nombre, edad, dpi)
+        self.curso=curso
+        self.titulo=titulo
+        
+    def Datos_Generales(self):
+        super().Datos_Basicos()
+        print("--Datos específicos--")
+        print("Profesión: docente")
+        print(f"Curso que da: {self.curso}")
+        print(f"Título: {self.titulo}")
+        
+class Administrativo(Persona):
+    def __init__(self, nombre, edad, dpi, area, oficina):
+        super().__init__(nombre, edad, dpi)
+        self.area=area
+        self.oficina=oficina
+        
+    def Datos_Generales(self):
+        super().Datos_Basicos()
+        print("--Datos específicos--")
+        print("Profesión: administrativo")
+        print(f"Area de atención: {self.area}")
+        print(f"Oficina: {self.oficina}")
+        
+estudiante1=Estudiante("Juan Cruz", 18, 152314521001, "Ingenieria en sistemas", 2025)
+estudiante1.Datos_Generales()
+
+docente1=Docente("Luis Hernandez", 25, 25141236514002, "Pensamiento computacional", "Ingeniero en Sistemas")
+docente1.Datos_Generales()
+
+administrativo1=Administrativo("Pedro Peres", 45, 142385147150013, "Artes", "A108-B")
+administrativo1.Datos_Generales()
