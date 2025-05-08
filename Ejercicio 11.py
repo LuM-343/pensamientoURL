@@ -30,7 +30,6 @@ except ValueError:
 
 #Ejercicio 2
 #Calculadora
-
 import math
 
 class OperacionCientifica ():
@@ -86,19 +85,6 @@ class Logaritmo (OperacionCientifica):
         except ValueError:
             print("El numero no puede ser negativo")
             
-class Logaritmo (OperacionCientifica):
-    def __init__(self, numUno, numDos):
-        super().__init__(numUno, numDos)
-    
-    def Operar(self):
-        try:
-            logaritmo= math.log(self.numUno,self.numDos)
-            print(logaritmo)
-        except TypeError:
-            print("Datos no válidos")
-        except ValueError:
-            print("El numero no puede ser negativo")
-            
 class Factorial (OperacionCientifica):
     def __init__(self, numUno, numDos):
         super().__init__(numUno, numDos)
@@ -112,5 +98,16 @@ class Factorial (OperacionCientifica):
         except ValueError:
             print("El numero no puede ser negativo")
             
-hola=OperacionCientifica(6,2)
-hola.Calcular()
+
+uno=RaizCuadrada(-49,5)
+uno.Calcular()
+uno.Operar()
+
+dos=Potencia(2,3)
+dos.Operar()
+
+tres=Logaritmo(1000,10)
+tres.Operar()
+
+cuatro=Factorial(6.2,1)
+cuatro.Operar()
