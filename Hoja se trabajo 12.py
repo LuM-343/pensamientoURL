@@ -9,9 +9,6 @@ dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
 niveles_azucar = [130, 160, 95, 175, 160] # mg/dL
 niveles_sal = [2000, 2400, 1800, 2400, 2700] # mg
 presion = [115, 130, 110, 125, 175] # mmHg
-azucarprom=0
-salprom=0
-presionprom=0
 
 print("**************************************************")
 print("      Hospital Regional de Huehuetenango")
@@ -21,9 +18,7 @@ print("**************************************************")
 for i in range(0,len(dias)):
     print();print("-------------------------")
     print(f"Diagnostico día {dias[i]}")
-    azucarprom=azucarprom+niveles_azucar[i]
-    salprom=salprom+niveles_sal[i]
-    presionprom=presionprom+presion[i]
+    
     if niveles_azucar[i]<70:
         print(f"- ¡ALERTA! Su azúcar en sangre es muy baja, {niveles_azucar[i]} mg/dL, requiere atención médica")
     elif niveles_azucar[i]>140:
@@ -47,6 +42,6 @@ for i in range(0,len(dias)):
         
 print();print("--------------------")
 print("Promedios de la semana")
-print(f"*| El promedio de azucar en sangre es de {azucarprom/len(dias)} mg/dL")
-print(f"*| El promedio de consumo de sal es de {salprom/len(dias)} mg")
-print(f"*| El promedio de la presión sistólica es de {presionprom/len(dias)} mmHg")
+print(f"*| El promedio de azucar en sangre es de {sum(niveles_azucar)/len(dias)} mg/dL")
+print(f"*| El promedio de consumo de sal es de {sum(niveles_sal)/len(dias)} mg")
+print(f"*| El promedio de la presión sistólica es de {sum(presion)/len(dias)} mmHg")
